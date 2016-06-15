@@ -21,8 +21,9 @@ Or install it yourself as:
 ## Usage
 
 You still have to write the conditions for rejection on your own.
-The rest is handled by this gem. This example would grant access only to
-GET requests
+The rest is handled by this gem. It will reject the request if the
+given block evaluates to true. This example would grant access only to
+GET requests:
 
 ```ruby
   use Rack::Rejector(body: 'No Teapot') do |request, options|
@@ -31,13 +32,15 @@ GET requests
 ```
 
 Available options are:
-```
+```ruby
   options.body = "I'm a teapot"
   options.code = 418
   options.headers = { 'x-teapot' => 'teapot' }
 ```
 
 you can set them either at initialization or override them in the block
+
+
 ## Development
 
 After checking out the repo, run `bundle` to install dependencies. Then, run `rake` to run the tests.
@@ -47,4 +50,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/ivx/rack-rejector.
-
