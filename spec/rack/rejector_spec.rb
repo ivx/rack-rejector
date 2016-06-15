@@ -31,7 +31,7 @@ describe Rack::Rejector do
     request = Rack::MockRequest.new(rejector)
     response = request.get('some/path')
     expect(response.status).to eq 503
-    expect(response.body).to eq '503 SERVICE UNAVAILIBLE'
+    expect(response.body).to eq '503 SERVICE UNAVAILABLE'
   end
 
   it 'uses the set options if it rejects' do
