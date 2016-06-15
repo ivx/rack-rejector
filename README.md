@@ -1,8 +1,6 @@
 # Rack::Rejector
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rack/rejector`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is a Rack Middleware to reject requests.
 
 ## Installation
 
@@ -22,15 +20,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You still have to write the conditions for rejection on your own.
+The rest is handled by this gem. This example would grant access only to
+GET requests
 
+```ruby
+  use Rack::Rejector(body: 'No Teapot') do |request, options|
+    !request.get?
+  end
+```
+
+Available options are:
+```
+  options.body = "I'm a teapot"
+  options.code = 418
+  options.headers = { 'x-teapot' => 'teapot' }
+```
+
+you can set them either at initialization or override them in the block
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bundle` to install dependencies. Then, run `rake` to run the tests.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rack-rejector.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ivx/rack-rejector.
 
