@@ -5,7 +5,7 @@ describe Rack::Rejector do
   let(:app) { ->(_env) { [200, {}, ['OK']] } }
 
   it 'does not reject if the block is false' do
-    rejector = described_class.new(app) do |_request, _opts|
+    rejector = described_class.new(app) do |_request, _options|
       false
     end
     request = Rack::MockRequest.new(rejector)
@@ -17,7 +17,7 @@ describe Rack::Rejector do
   end
 
   it 'rejects if the block is true' do
-    rejector = described_class.new(app) do |_request, _opts|
+    rejector = described_class.new(app) do |_request, _options|
       true
     end
     request = Rack::MockRequest.new(rejector)
@@ -27,11 +27,11 @@ describe Rack::Rejector do
     p response.headers
   end
 
-  it 'uses the set opts if it rejects' do
-    rejector = described_class.new(app) do |_request, opts|
-      opts[:body] = 'teapot'
-      opts[:code] = 418
-      opts[:headers] = { X_TEST_HEADER: 'darjeeling' }
+  it 'uses the set options if it rejects' do
+    rejector = described_class.new(app) do |_request, options|
+      options[:body] = 'teapot'
+      options[:code] = 418
+      options[:headers] = { X_TEST_HEADER: 'darjeeling' }
       true
     end
     request = Rack::MockRequest.new(rejector)
@@ -42,16 +42,16 @@ describe Rack::Rejector do
     expect(response.headers).to include X_TEST_HEADER: 'darjeeling'
   end
 
-  it 'does not use the set opts if it doesn\'t reject' do
-    rejector = described_class.new(app) do |_request, opts|
-      opts[:body] = 'teapot'
-      opts[:code] = 418
+  it 'does not use the set options if it doesn\'t reject' do
+    rejector = described_class.new(app) do |_request, options|
+      options[:body] = 'teapot'
+      options[:code] = 418
       false
     end
     request = Rack::MockRequest.new(rejector)
     response = request.get('some/path')
 
-    expect(response.i_m_a_teapot?).to_not be true # Status Code 418
+    expect(response.i_m_a_teapot?).to be false # Status Code 418
     expect(response.body).to_not eq 'teapot'
   end
 end

@@ -16,30 +16,30 @@ module Rack
 
     def call(env)
       request = Rack::Request.new(env)
-      opts = @options.clone
-      reject?(request, opts) ? reject!(request, opts) : @app.call(env)
+      options = @options.clone
+      reject?(request, options) ? reject!(request, options) : @app.call(env)
     end
 
-    def reject?(request, opts)
-      @block.call(request, opts)
+    def reject?(request, options)
+      @block.call(request, options)
     end
 
-    def reject!(_request, opts)
-      [status(opts), headers(opts), body(opts)]
+    def reject!(_request, options)
+      [status(options), headers(options), body(options)]
     end
 
-    def headers(opts)
+    def headers(options)
       headers = {}
       headers['Content-Type'] = 'text/html; charset=utf-8'
-      headers.merge(opts[:headers])
+      headers.merge(options[:headers])
     end
 
-    def status(opts)
-      opts[:code]
+    def status(options)
+      options[:code]
     end
 
-    def body(opts)
-      Array(opts[:body])
+    def body(options)
+      Array(options[:body])
     end
   end
 end
