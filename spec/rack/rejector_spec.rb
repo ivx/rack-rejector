@@ -13,7 +13,6 @@ describe Rack::Rejector do
 
     expect(response.status).to eq 200
     expect(response.body).to eq 'OK'
-    p response.headers
   end
 
   it 'rejects if the block is true' do
@@ -24,7 +23,6 @@ describe Rack::Rejector do
     response = request.get('some/path')
     expect(response.status).to eq 503
     expect(response.body).to eq '503 SERVICE UNAVAILIBLE'
-    p response.headers
   end
 
   it 'uses the set options if it rejects' do
