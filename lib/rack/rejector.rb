@@ -5,8 +5,8 @@ module Rack
     def initialize(app, options = {}, &block)
       default_options = {
         code: 503,
-        msg: '503 SERVICE UNAVAILIBLE',
-        headers: {},
+        body: '503 SERVICE UNAVAILIBLE',
+        headers: {}
       }
 
       @app = app
@@ -25,17 +25,12 @@ module Rack
     end
 
     def reject!(_request, opts)
-      [status(opts), headers(opts), response(opts)]
+      [status(opts), headers(opts), body(opts)]
     end
 
     def headers(opts)
       headers = {}
-
       headers['Content-Type'] = 'text/html; charset=utf-8'
-      headers['Content-Disposition'] = "inline; filename='reject.html'"
-      headers['Content-Transfer-Encoding'] = 'binary'
-      headers['Cache-Control'] = 'private'
-
       headers.merge(opts[:headers])
     end
 
@@ -43,8 +38,8 @@ module Rack
       opts[:code]
     end
 
-    def response(opts)
-      Array.wrap(opts[:msg])
+    def body(opts)
+      Array(opts[:body])
     end
   end
 end
