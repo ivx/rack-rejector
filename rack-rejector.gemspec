@@ -6,11 +6,12 @@ require 'rack/rejector/version'
 Gem::Specification.new do |spec|
   spec.name          = 'rack-rejector'
   spec.version       = Rack::Rejector::VERSION
-  spec.authors       = ['Tristan Druyen']
-  spec.email         = ['tristan.druyen@invision.de']
+  spec.authors       = ['Tristan Druyen', 'Maik Röhrig']
+  spec.email         = ['tristan.druyen@invision.de',
+                        'maik.roehrig@invision.de']
 
-  spec.summary       = 'Write a short summary, because Rubygems requires one.'
-  spec.homepage      = ''
+  spec.summary       = 'This gem is a Rack Middleware to reject requests.'
+  spec.homepage      = 'https://github.com/ivx/rack-rejector'
 
   spec.files         = `git ls-files -z`
                        .split("\x0")
