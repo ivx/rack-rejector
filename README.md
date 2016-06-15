@@ -29,19 +29,19 @@ given block evaluates to true. This example would grant access only to
 GET requests:
 
 ```ruby
-  use Rack::Rejector(body: 'No Teapot') do |request, options|
+  use Rack::Rejector, body: 'No Teapot' do |request, options|
     !request.get?
   end
 ```
 
 Available options are:
 ```ruby
-  options.body = "I'm a teapot"
-  options.code = 418
-  options.headers = { 'x-teapot' => 'teapot' }
+  options.body = "I'm a teapot" # Default: '503 SERVICE UNAVAILABLE'
+  options.code = 418 # Default: 503
+  options.headers = { 'x-teapot' => 'teapot' } # Default: {}
 ```
 
-you can set them either at initialization or override them in the block
+You can set them either at initialization or override them in the block.
 
 
 ## Development
