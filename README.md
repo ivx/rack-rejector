@@ -1,4 +1,6 @@
 # Rack::Rejector
+[ ![Codeship Status for
+ivx/rack-rejector](https://codeship.com/projects/0cd03420-153b-0134-7cf2-4edb1994d75d/status?branch=master) ](https://codeship.com/projects/158044)
 
 This gem is a Rack Middleware to reject requests.
 
