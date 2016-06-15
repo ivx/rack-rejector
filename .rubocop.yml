@@ -1,0 +1,31 @@
+# Common configuration.
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - apps/accounting_records_csv/application.rb
+    - apps/public_api/application.rb
+
+Documentation:
+  Enabled: false
+
+MethodLength:
+  Enabled: false
+
+AbcSize:
+  Enabled: false
+
+DoubleNegation:
+  Enabled: false
+
+NumericLiterals:
+  Enabled: false
+
+SingleLineBlockParams:
+  Enabled: false
+
+FrozenStringLiteralComment:
+  Enabled: false
