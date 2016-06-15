@@ -20,6 +20,8 @@ module Rack
       reject?(request, options) ? reject!(request, options) : @app.call(env)
     end
 
+    private
+
     def reject?(request, options)
       @block.call(request, options)
     end
