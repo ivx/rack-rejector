@@ -59,7 +59,19 @@ describe Rack::Rejector do
     expect(response.body).to eq 'coffeepot'
   end
 
-  it 'does not use the set options if it doesn\'t reject' do
+  it 'does not mutate the original options' do
+    original_options = { body: 'bla' }
+    rejector = described_class
+               .new(app, original_options) do |_request, options|
+      expect(options[:body]).to eq 'bla'
+      options[:body] = 'blub'
+    end
+
+    Rack::MockRequest.new(rejector).get('some/path')
+    Rack::MockRequest.new(rejector).get('some/path')
+  end
+
+  it 'does not use the set options if it does not reject' do
     rejector = described_class.new(
       app, body: 'teapot',
            code: 418,
