@@ -29,3 +29,13 @@ SingleLineBlockParams:
 
 FrozenStringLiteralComment:
   Enabled: false
+
+BlockLength:
+  CountComments: false
+  Max: 25
+  Exclude:
+  - 'Rakefile'
+  - 'apps/api/application.rb'
+  - '**/*.rake'
+  - 'spec/**/*.rb'
+  - 'test/**/*.rb'

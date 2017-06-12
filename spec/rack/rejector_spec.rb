@@ -44,7 +44,7 @@ describe Rack::Rejector do
     end
     response = Rack::MockRequest.new(rejector).get('some/path')
 
-    expect(response.i_m_a_teapot?).to be true # Status Code 418
+    expect(response.status).to eq 418
     expect(response.body).to eq 'teapot'
     expect(response.headers).to include 'X-TEA-TYPE' => 'darjeeling'
   end
@@ -82,7 +82,7 @@ describe Rack::Rejector do
     request = Rack::MockRequest.new(rejector)
     response = request.get('some/path')
 
-    expect(response.i_m_a_teapot?).to be false # Status Code 418
+    expect(response.status).to_not eq 418
     expect(response.body).to_not eq 'teapot'
   end
 end
