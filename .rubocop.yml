@@ -4,31 +4,71 @@ AllCops:
   Exclude:
     - db/**/*
     - config/**/*
+    - script/**/*
+    - vendor/assets/bower_components/**/*
+    - Rakefile
+    - Guardfile
+    - bin/*
+    - db/**/*
+    - config/**/*
+    - script/**/*
+    - Rakefile
     - tmp/**/*
     - vendor/**/*
-    - apps/accounting_records_csv/application.rb
-    - apps/public_api/application.rb
+    - spec/support/**/*
+    - spec/spec_helper.rb
+
+LineLength:
+  Enabled: true
+  Max: 80
 
 Documentation:
   Enabled: false
 
-MethodLength:
+AlignHash:
   Enabled: false
+
+# Buggy cop:
+EndOfLine:
+  Enabled: false
+
+AsciiComments:
+  Enabled: false
+
+# Not working for breaks_paid? method
+TrivialAccessors:
+  Enabled: false
+
+# Disabled since renaming has methods makes no sense
+PredicateName:
+  Enabled: false
+
+IndentationConsistency:
+  Enabled: false
+
+ConditionPosition:
+  Enabled: false
+
+# We want to use the compact style of module definitions
+ClassAndModuleChildren:
+  Enabled: false
+
+# Buggy cop:
+BlockAlignment:
+  Enabled: false
+
+MethodLength:
+  Enabled: true
 
 AbcSize:
   Enabled: false
 
-DoubleNegation:
-  Enabled: false
-
-NumericLiterals:
-  Enabled: false
-
-SingleLineBlockParams:
-  Enabled: false
-
-FrozenStringLiteralComment:
-  Enabled: false
+VariableNumber:
+  EnforcedStyle: snake_case
+  SupportedStyles:
+  - snake_case
+  - normalcase
+  - non_integer
 
 BlockLength:
   CountComments: false
