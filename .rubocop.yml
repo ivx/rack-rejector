@@ -1,6 +1,5 @@
 # Common configuration.
 AllCops:
-  TargetRubyVersion: 2.3
   Exclude:
     - db/**/*
     - config/**/*
@@ -28,33 +27,13 @@ Documentation:
 AlignHash:
   Enabled: false
 
-# Buggy cop:
-EndOfLine:
-  Enabled: false
-
 AsciiComments:
-  Enabled: false
-
-# Not working for breaks_paid? method
-TrivialAccessors:
-  Enabled: false
-
-# Disabled since renaming has methods makes no sense
-PredicateName:
   Enabled: false
 
 IndentationConsistency:
   Enabled: false
 
 ConditionPosition:
-  Enabled: false
-
-# We want to use the compact style of module definitions
-ClassAndModuleChildren:
-  Enabled: false
-
-# Buggy cop:
-BlockAlignment:
   Enabled: false
 
 MethodLength:
