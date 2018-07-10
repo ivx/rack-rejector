@@ -4,14 +4,9 @@ AllCops:
     - db/**/*
     - config/**/*
     - script/**/*
-    - vendor/assets/bower_components/**/*
     - Rakefile
     - Guardfile
     - bin/*
-    - db/**/*
-    - config/**/*
-    - script/**/*
-    - Rakefile
     - tmp/**/*
     - vendor/**/*
     - spec/support/**/*
@@ -36,9 +31,6 @@ IndentationConsistency:
 ConditionPosition:
   Enabled: false
 
-MethodLength:
-  Enabled: true
-
 AbcSize:
   Enabled: false
 
@@ -53,8 +45,29 @@ BlockLength:
   CountComments: false
   Max: 25
   Exclude:
+  - 'spec/**/*.rb'
+  - 'test/**/*.rb'
   - 'Rakefile'
   - 'apps/api/application.rb'
   - '**/*.rake'
+
+ClassLength:
+  CountComments: false
+  Exclude:
   - 'spec/**/*.rb'
   - 'test/**/*.rb'
+
+MethodLength:
+  Enabled: true
+  Exclude:
+  - 'spec/**/*.rb'
+  - 'test/**/*.rb'
+
+ModuleLength:
+  CountComments: false
+  Exclude:
+  - 'spec/**/*.rb'
+  - 'test/**/*.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
