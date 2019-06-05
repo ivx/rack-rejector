@@ -5,6 +5,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y build-essential c
 WORKDIR /code
 
 COPY . /code
+RUN gem install bundler
 RUN bundle install --jobs=4 --retry=3
 
 RUN bundle exec rake build
