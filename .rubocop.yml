@@ -1,3 +1,77 @@
-inherit_gem:
-  rubocop-config-ivx:
-    - default.yml
+# Common configuration.
+
+AllCops:
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - script/**/*
+    - Rakefile
+    - Guardfile
+    - bin/*
+    - tmp/**/*
+    - vendor/**/*
+  TargetRubyVersion: 2.6
+
+LineLength:
+  Enabled: true
+  Max: 80
+
+Documentation:
+  Enabled: false
+
+AlignHash:
+  Enabled: false
+
+AsciiComments:
+  Enabled: false
+
+IndentationConsistency:
+  Enabled: false
+
+ConditionPosition:
+  Enabled: false
+
+AbcSize:
+  Enabled: false
+
+VariableNumber:
+  EnforcedStyle: snake_case
+  SupportedStyles:
+  - snake_case
+  - normalcase
+  - non_integer
+
+BlockLength:
+  CountComments: false
+  Max: 25
+  Exclude:
+  - 'spec/**/*.rb'
+  - 'test/**/*.rb'
+  - 'Rakefile'
+  - '*.gemspec'
+  - 'apps/api/application.rb'
+  - '**/*.rake'
+
+ClassLength:
+  CountComments: false
+  Exclude:
+  - 'spec/**/*.rb'
+  - 'test/**/*.rb'
+
+MethodLength:
+  Enabled: true
+  Exclude:
+  - 'spec/**/*.rb'
+  - 'test/**/*.rb'
+
+ModuleLength:
+  CountComments: false
+  Exclude:
+  - 'spec/**/*.rb'
+  - 'test/**/*.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
