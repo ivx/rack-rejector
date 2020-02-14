@@ -17,7 +17,7 @@ RUN yarn lint
 
 FROM quay.io/invisionag/fullstaq-ruby:2.7.0-jemalloc
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y build-essential curl git && apt-get -y autoremove && apt-get install libsqlite3-dev
+RUN apt-get update && apt-get upgrade -y && apt-get install -y build-essential git && apt-get -y autoremove
 
 WORKDIR /code
 
