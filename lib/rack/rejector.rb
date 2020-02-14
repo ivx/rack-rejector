@@ -1,14 +1,10 @@
-# frozen_string_literal: true
-
 require 'rack/rejector/version'
 
 module Rack
   class Rejector
     def initialize(app, options = {}, &block)
       default_options = {
-        code: 503,
-        body: '503 SERVICE UNAVAILABLE',
-        headers: {}
+        code: 503, body: '503 SERVICE UNAVAILABLE', headers: {}
       }
 
       @app = app
