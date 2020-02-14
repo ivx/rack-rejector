@@ -1,4 +1,16 @@
-@Library('ivx@0.2.2') _
+def name = 'rack-rejector'
+def app
+def version
 
-buildPipelineGem {
+node {
+  checkout scm
+  stage('Build') {
+    app = docker.build("quay.io/invisionag/${name}", "--pull .")
+  }
+
+  stage('Test') {
+    app.inside {
+      sh "bundle exec rake"
+    }
+  }
 }
