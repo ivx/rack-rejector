@@ -1,4 +1,4 @@
-def name = 'rack-rejector'
+def appName = 'rack-rejector'
 def app
 def version
 
