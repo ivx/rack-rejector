@@ -15,9 +15,6 @@ COPY . /code
 RUN yarn install
 RUN yarn lint
 
-WORKDIR /code
-
-COPY . /code
 RUN gem install bundler
 RUN bundle install
 
