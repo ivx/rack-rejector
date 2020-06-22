@@ -7,7 +7,7 @@ node {
 
   checkout scm
   stage('Build') {
-    app = docker.build("quay.io/invisionag/${appName}:${env.BRANCH_NAME}-${env.BUILD_NUMBER}", "--pull .")
+    app = docker.build("eu.gcr.io/ivx-docker-registry/${appName}:${env.BRANCH_NAME}-${env.BUILD_NUMBER}", "--pull .")
   }
 
   stage('Test') {

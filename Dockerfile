@@ -1,4 +1,4 @@
-FROM quay.io/invisionag/fullstaq-ruby:2.7.1-jemalloc
+FROM eu.gcr.io/ivx-docker-registry/fullstaq-ruby:2.7.1-jemalloc
 
 ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
