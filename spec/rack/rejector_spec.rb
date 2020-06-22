@@ -76,7 +76,7 @@ describe Rack::Rejector do
     request = Rack::MockRequest.new(rejector)
     response = request.get('some/path')
 
-    expect(response.status).to_not eq 418
-    expect(response.body).to_not eq 'teapot'
+    expect(response.status).not_to eq 418
+    expect(response.body).not_to eq 'teapot'
   end
 end
