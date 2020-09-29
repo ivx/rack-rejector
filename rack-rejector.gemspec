@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'This gem is a Rack Middleware to reject requests.'
   spec.homepage = 'https://github.com/ivx/rack-rejector'
+  spec.required_ruby_version = '~> 2.7'
 
   spec.files =
     `git ls-files -z`.split("\x0").reject do |f|
