@@ -1,16 +1,5 @@
-def appName = 'rack-rejector'
-def app
-def version
+@Library('ivx@0.12.0) _
 
-node {
-  checkout scm
-  stage('Build') {
-    app = docker.build("eu.gcr.io/ivx-docker-registry/${appName}:${env.BRANCH_NAME}-${env.BUILD_NUMBER}", "--pull .")
-  }
-
-  stage('Test') {
-    app.inside('-u 0:0') {
-      sh "bundle exec rake"
-    }
-  }
+buildPipelineGem {
+  dockerRegistry = '276018124710.dkr.ecr.eu-west-1.amazonaws.com'
 }
