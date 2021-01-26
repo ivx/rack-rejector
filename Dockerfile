@@ -1,5 +1,4 @@
-FROM eu.gcr.io/ivx-docker-registry/fullstaq-ruby:2.7.2-jemalloc
-
+FROM 276018124710.dkr.ecr.eu-west-1.amazonaws.com/fullstaq-ruby:3.0.0-jemalloc
 ENV LANG=C.UTF-8
 ENV LANGUAGE=C.UTF-8
 ENV LC_ALL=C.UTF-8
