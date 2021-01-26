@@ -9,7 +9,7 @@
     "format": "prettier --write --ignore-path='.gitignore' '**/*.rb'"
   },
   "devDependencies": {
-    "@prettier/plugin-ruby": "0.20.1",
+    "@prettier/plugin-ruby": "1.5.0",
     "prettier": "^2.2.0"
   }
 }
