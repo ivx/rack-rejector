@@ -1,3 +1,5 @@
+AllCops:
+  TargetRubyVersion: 2.7
 inherit_gem:
   rubocop-config-ivx:
     - default.yml
