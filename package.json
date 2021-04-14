@@ -9,7 +9,8 @@
     "format": "prettier --write --ignore-path='.gitignore' '**/*.rb'"
   },
   "devDependencies": {
-    "@prettier/plugin-ruby": "1.5.4",
+    "@invisionag/prettier-config-ivx": "^2.1.1",
+    "@prettier/plugin-ruby": "1.5.5",
     "prettier": "^2.2.0"
   }
 }
