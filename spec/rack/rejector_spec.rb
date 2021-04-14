@@ -38,8 +38,8 @@ describe Rack::Rejector do
         body: 'teapot',
         code: 418,
         headers: {
-          'X-TEA-TYPE' => 'darjeeling'
-        }
+          'X-TEA-TYPE' => 'darjeeling',
+        },
       ) { |_request, _options| true }
     response = Rack::MockRequest.new(rejector).get('some/path')
 
@@ -78,8 +78,8 @@ describe Rack::Rejector do
         body: 'teapot',
         code: 418,
         headers: {
-          'X-TEA-TYPE' => 'darjeeling'
-        }
+          'X-TEA-TYPE' => 'darjeeling',
+        },
       ) { |_request, _options| false }
     request = Rack::MockRequest.new(rejector)
     response = request.get('some/path')

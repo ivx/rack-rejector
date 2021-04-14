@@ -12,5 +12,6 @@
     "@invisionag/prettier-config-ivx": "^2.1.1",
     "@prettier/plugin-ruby": "1.5.5",
     "prettier": "^2.2.0"
-  }
+  },
+  "prettier": "@invisionag/prettier-config-ivx"
 }
