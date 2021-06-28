@@ -5,21 +5,21 @@ __metadata:
   version: 4
   cacheKey: 7
 
-"@invisionag/prettier-config-ivx@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "@invisionag/prettier-config-ivx@npm:2.1.1"
+"@invisionag/prettier-config-ivx@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "@invisionag/prettier-config-ivx@npm:2.1.2"
   peerDependencies:
     prettier: ^2.0.5
-  checksum: 026d2dbe720a7cf19114cd63713446dc1887b60a0048ac18308209b911aeb1562247f958396bdf94dd2255dd849292de04d6f17984b014909689b07ccac9e076
+  checksum: 18abb2c816a279e8c0d762f37b75e103d3f2f2adc581f4f5cb23acefea05441120f7140555fc31db94e40c29922e5fc13d150aa30d50205f7db95cc78031330e
   languageName: node
   linkType: hard
 
-"@prettier/plugin-ruby@npm:1.5.5":
-  version: 1.5.5
-  resolution: "@prettier/plugin-ruby@npm:1.5.5"
+"@prettier/plugin-ruby@npm:1.6.0":
+  version: 1.6.0
+  resolution: "@prettier/plugin-ruby@npm:1.6.0"
   dependencies:
     prettier: ">=1.10"
-  checksum: 0ea874bf9ee0036a9d7d30ba0844bffc3a0657658bfd02ff79f5376149b1f24f3f427e4c6d5a7e55e158da51a723a6db89cf64617566aa7be53395f22749b916
+  checksum: abd90890aaa43821f6f0a719bc347fecdf76a37d5a4039da3062ced2ad3b4b38182e2f90306c2dab83e61ec6c62862e1b253441cc0ed4a2c7477333798c8494a
   languageName: node
   linkType: hard
 
@@ -32,12 +32,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "prettier@npm:2.3.0"
+"prettier@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "prettier@npm:2.3.2"
   bin:
     prettier: bin-prettier.js
-  checksum: 652640cc8b71bc5277cfb8bf6f161783ca588efcf683c3d630837b39da8d57fef35c9e00ae5855a8e3c75136c42274046c913cc2b2d2968558315f31c6a26981
+  checksum: 4fd89a7f6a12b13456d359fba2b1dd0fc0a17cf33f8f15953ab9f43b21ea9b09b5a2861d63b558ca0577274ce606d390e70628cf93e26d19d6cb7f19c9eebc31
   languageName: node
   linkType: hard
 
@@ -45,8 +45,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rack-rejector@workspace:."
   dependencies:
-    "@invisionag/prettier-config-ivx": ^2.1.1
-    "@prettier/plugin-ruby": 1.5.5
-    prettier: ^2.3.0
+    "@invisionag/prettier-config-ivx": ^2.1.2
+    "@prettier/plugin-ruby": 1.6.0
+    prettier: ^2.3.2
   languageName: unknown
   linkType: soft
