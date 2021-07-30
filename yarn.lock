@@ -5,21 +5,21 @@ __metadata:
   version: 4
   cacheKey: 7
 
-"@invisionag/prettier-config-ivx@npm:^2.1.2":
-  version: 2.1.2
-  resolution: "@invisionag/prettier-config-ivx@npm:2.1.2"
+"@invisionag/prettier-config-ivx@npm:^2.1.3":
+  version: 2.1.3
+  resolution: "@invisionag/prettier-config-ivx@npm:2.1.3"
   peerDependencies:
-    prettier: ^2.0.5
-  checksum: 18abb2c816a279e8c0d762f37b75e103d3f2f2adc581f4f5cb23acefea05441120f7140555fc31db94e40c29922e5fc13d150aa30d50205f7db95cc78031330e
+    prettier: ">=2.0.0"
+  checksum: 2072aacd77cdf8dd5b3925c6e3d50fea719eb2c38c9768ad0cb238373dd38e85b1f05138861a775bfb073550ba152b74c2084bbc07fc600d719aa16739607d48
   languageName: node
   linkType: hard
 
-"@prettier/plugin-ruby@npm:1.6.0":
-  version: 1.6.0
-  resolution: "@prettier/plugin-ruby@npm:1.6.0"
+"@prettier/plugin-ruby@npm:1.6.1":
+  version: 1.6.1
+  resolution: "@prettier/plugin-ruby@npm:1.6.1"
   dependencies:
     prettier: ">=1.10"
-  checksum: abd90890aaa43821f6f0a719bc347fecdf76a37d5a4039da3062ced2ad3b4b38182e2f90306c2dab83e61ec6c62862e1b253441cc0ed4a2c7477333798c8494a
+  checksum: 38530282b1653a82409a3a30739bbaad5926e30f97830fdee5895705c0aa89d8cbaf2f136366a00d3968c829ad226a2b26e9f68b3d73d2e6d1e29882afcf837a
   languageName: node
   linkType: hard
 
@@ -45,8 +45,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rack-rejector@workspace:."
   dependencies:
-    "@invisionag/prettier-config-ivx": ^2.1.2
-    "@prettier/plugin-ruby": 1.6.0
+    "@invisionag/prettier-config-ivx": ^2.1.3
+    "@prettier/plugin-ruby": 1.6.1
     prettier: ^2.3.2
   languageName: unknown
   linkType: soft
