@@ -10,9 +10,9 @@
     "format": "npm run prettify -- --write"
   },
   "devDependencies": {
-    "@invisionag/prettier-config-ivx": "^2.1.3",
-    "@prettier/plugin-ruby": "1.6.1",
-    "prettier": "^2.3.2"
+    "@invisionag/prettier-config-ivx": "^3.0.1",
+    "@prettier/plugin-ruby": "2.0.0",
+    "prettier": "^2.5.1"
   },
   "prettier": "@invisionag/prettier-config-ivx"
 }
