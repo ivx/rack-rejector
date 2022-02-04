@@ -4,9 +4,10 @@
   "repository": "https://github.com/ivx/cloud-importer.git",
   "author": "Tobias <tobias.lengsholz@invision.de>",
   "license": "MIT",
-  "scripts": {
-    "lint": "prettier --check --ignore-path='.gitignore' '**/*.rb'",
-    "format": "prettier --write --ignore-path='.gitignore' '**/*.rb'"
+    "scripts": {
+    "prettify": "prettier \"**/*.{ru,rb}\" --ignore-path=\".gitignore\"",
+    "lint": "npm run prettify -- --check",
+    "format": "npm run prettify -- --write"
   },
   "devDependencies": {
     "@invisionag/prettier-config-ivx": "^2.1.3",
