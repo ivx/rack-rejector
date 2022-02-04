@@ -1,3 +1,4 @@
+# coding: utf-8
 # frozen_string_literal: true
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -12,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary = 'This gem is a Rack Middleware to reject requests.'
   spec.homepage = 'https://github.com/ivx/rack-rejector'
   spec.required_ruby_version = '~> 3.0'
+  spec.metadata = { 'rubygems_mfa_required' => 'true' }
 
   spec.files =
     `git ls-files -z`.split("\x0").reject do |f|
