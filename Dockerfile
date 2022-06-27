@@ -12,9 +12,9 @@ RUN apt-get update && apt-get install -y curl build-essential git \
 WORKDIR /code
 COPY . /code
 
-RUN npm ci && npm run lint && rm -rf node_modules
-
 RUN gem install bundler
 RUN bundle install
+
+RUN npm ci && npm run lint && rm -rf node_modules
 
 RUN bundle exec rake build
