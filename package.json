@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "@invisionag/prettier-config-ivx": "^3.0.1",
-    "@prettier/plugin-ruby": "2.1.0",
-    "prettier": "^2.6.2"
+    "@prettier/plugin-ruby": "3.1.2",
+    "prettier": "^2.7.1"
   },
   "prettier": "@invisionag/prettier-config-ivx"
 }
