@@ -7,7 +7,8 @@ module Rack
       default_options = {
         code: 503,
         body: '503 SERVICE UNAVAILABLE',
-        headers: {},
+        headers: {
+        },
       }
 
       @app = app
