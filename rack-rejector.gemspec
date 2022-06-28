@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'This gem is a Rack Middleware to reject requests.'
   spec.homepage = 'https://github.com/ivx/rack-rejector'
-  spec.required_ruby_version = '~> 3.0'
+  spec.required_ruby_version = '>= 3.1'
   spec.metadata = { 'rubygems_mfa_required' => 'true' }
 
   spec.files =
@@ -23,6 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'rack'
   spec.add_development_dependency 'bundler', '~> 2'
+  spec.add_development_dependency 'prettier'
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
 end
