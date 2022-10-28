@@ -5,7 +5,7 @@ ENV LANGUAGE=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
 RUN apt-get update && apt-get install -y curl build-essential git \
-  && curl -sL https://deb.nodesource.com/setup_18.x | bash - \
+  && curl -sL https://deb.nodesource.com/setup_19.x | bash - \
   && apt-get install -y nodejs \
   && npm install -g npm
 
