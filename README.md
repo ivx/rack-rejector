@@ -1,3 +1,8 @@
+# Unmaintained
+
+This package is unmaintained.
+If you would like to maintain this package, please get in contact.
+
 # Rack::Rejector
 This gem is a Rack Middleware to reject requests.
 
