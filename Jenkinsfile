@@ -1,5 +1,3 @@
-@Library('ivx@5.0.4') _
+@Library('ivx@7.0.0') _
 
-buildPipelineGem {
-  dockerRegistry = '276018124710.dkr.ecr.eu-west-1.amazonaws.com'
-}
+buildPipelineGem {}
